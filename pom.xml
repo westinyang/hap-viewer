@@ -109,7 +109,7 @@
                     </nativeImageArgs>
                     <releaseConfiguration>
                         <description>A cross-platform HAP viewer (API 9+ support)</description>
-                        <vendor>westinyang</vendor>
+                        <vendor>OHOS Dev</vendor>
                         <version>${version}</version>
                     </releaseConfiguration>
                 </configuration>

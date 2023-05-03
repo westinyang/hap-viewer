@@ -1,0 +1,418 @@
+[
+{
+  "name":"cn.hutool.json.JSONArray",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"cn.hutool.json.JSONConverter",
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.glass.ui.Screen"
+},
+{
+  "name":"com.sun.javafx.font.directwrite.DWFactory",
+  "methods":[{"name":"getFactory","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.PrintLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.jfr.JFRPulseLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.reflect.Trampoline",
+  "methods":[{"name":"invoke","parameterTypes":["java.lang.reflect.Method","java.lang.Object","java.lang.Object[]"] }]
+},
+{
+  "name":"com.sun.javafx.scene.control.skin.Utils",
+  "methods":[{"name":"getResource","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"com.sun.javafx.tk.quantum.QuantumToolkit",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.GraphicsPipeline",
+  "methods":[
+    {"name":"getFontFactory","parameterTypes":[] }, 
+    {"name":"getPipeline","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.sun.prism.shader.DrawPgram_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillCircle_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureFirstPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureRGB_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureSecondPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.PrRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSBlend_SRC_INPeer",
+  "methods":[{"name":"<init>","parameterTypes":["com.sun.scenario.effect.FilterContext","com.sun.scenario.effect.impl.Renderer","java.lang.String"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSLinearConvolveShadowPeer",
+  "methods":[{"name":"<init>","parameterTypes":["com.sun.scenario.effect.FilterContext","com.sun.scenario.effect.impl.Renderer","java.lang.String"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.xml.internal.stream.XMLInputFactoryImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Character",
+  "methods":[{"name":"isIdeographic","parameterTypes":["int"] }]
+},
+{
+  "name":"java.lang.Class",
+  "methods":[{"name":"getModule","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Module",
+  "methods":[{"name":"getResourceAsStream","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.nio.ByteBuffer",
+  "methods":[{"name":"order","parameterTypes":["java.nio.ByteOrder"] }]
+},
+{
+  "name":"java.nio.ByteOrder",
+  "methods":[{"name":"nativeOrder","parameterTypes":[] }]
+},
+{
+  "name":"java.security.SecureRandomParameters"
+},
+{
+  "name":"java.util.HashMap",
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.animation.KeyValue"
+},
+{
+  "name":"javafx.fxml.FXMLLoader"
+},
+{
+  "name":"javafx.geometry.Pos",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.Camera"
+},
+{
+  "name":"javafx.scene.Cursor",
+  "fields":[{"name":"HAND"}]
+},
+{
+  "name":"javafx.scene.Node",
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"getId","parameterTypes":[] }, 
+    {"name":"setClip","parameterTypes":["javafx.scene.Node"] }, 
+    {"name":"setCursor","parameterTypes":["javafx.scene.Cursor"] }, 
+    {"name":"setId","parameterTypes":["java.lang.String"] }, 
+    {"name":"setLayoutX","parameterTypes":["double"] }, 
+    {"name":"setLayoutY","parameterTypes":["double"] }, 
+    {"name":"setOnDragDropped","parameterTypes":["javafx.event.EventHandler"] }, 
+    {"name":"setOnDragOver","parameterTypes":["javafx.event.EventHandler"] }, 
+    {"name":"setOnMouseClicked","parameterTypes":["javafx.event.EventHandler"] }, 
+    {"name":"setPickOnBounds","parameterTypes":["boolean"] }, 
+    {"name":"setStyle","parameterTypes":["java.lang.String"] }, 
+    {"name":"setUserData","parameterTypes":["java.lang.Object"] }
+  ]
+},
+{
+  "name":"javafx.scene.ParallelCamera"
+},
+{
+  "name":"javafx.scene.Parent",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.Scene"
+},
+{
+  "name":"javafx.scene.control.Button",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.ButtonBase",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"setOnAction","parameterTypes":["javafx.event.EventHandler"] }]
+},
+{
+  "name":"javafx.scene.control.ContentDisplay",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.control.Control",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.CustomMenuItem",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Label",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.Labeled",
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"setAlignment","parameterTypes":["javafx.geometry.Pos"] }, 
+    {"name":"setContentDisplay","parameterTypes":["javafx.scene.control.ContentDisplay"] }, 
+    {"name":"setFont","parameterTypes":["javafx.scene.text.Font"] }, 
+    {"name":"setMnemonicParsing","parameterTypes":["boolean"] }, 
+    {"name":"setText","parameterTypes":["java.lang.String"] }, 
+    {"name":"setUnderline","parameterTypes":["boolean"] }
+  ]
+},
+{
+  "name":"javafx.scene.control.Menu",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getItems","parameterTypes":[] }
+  ]
+},
+{
+  "name":"javafx.scene.control.MenuBar",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getMenus","parameterTypes":[] }
+  ]
+},
+{
+  "name":"javafx.scene.control.MenuItem",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getId","parameterTypes":[] }, 
+    {"name":"setId","parameterTypes":["java.lang.String"] }, 
+    {"name":"setMnemonicParsing","parameterTypes":["boolean"] }, 
+    {"name":"setOnAction","parameterTypes":["javafx.event.EventHandler"] }, 
+    {"name":"setText","parameterTypes":["java.lang.String"] }
+  ]
+},
+{
+  "name":"javafx.scene.control.SeparatorMenuItem",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.effect.Effect"
+},
+{
+  "name":"javafx.scene.image.Image"
+},
+{
+  "name":"javafx.scene.image.ImageView",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"setFitHeight","parameterTypes":["double"] }, 
+    {"name":"setFitWidth","parameterTypes":["double"] }, 
+    {"name":"setImage","parameterTypes":["javafx.scene.image.Image"] }, 
+    {"name":"setPreserveRatio","parameterTypes":["boolean"] }
+  ]
+},
+{
+  "name":"javafx.scene.input.Clipboard"
+},
+{
+  "name":"javafx.scene.input.Dragboard"
+},
+{
+  "name":"javafx.scene.layout.HBox",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.Pane",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"getChildren","parameterTypes":[] }
+  ]
+},
+{
+  "name":"javafx.scene.layout.Region",
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"setMaxHeight","parameterTypes":["double"] }, 
+    {"name":"setMaxWidth","parameterTypes":["double"] }, 
+    {"name":"setMinHeight","parameterTypes":["double"] }, 
+    {"name":"setMinWidth","parameterTypes":["double"] }, 
+    {"name":"setPrefHeight","parameterTypes":["double"] }, 
+    {"name":"setPrefWidth","parameterTypes":["double"] }
+  ]
+},
+{
+  "name":"javafx.scene.paint.Paint",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.shape.Circle",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"setCenterX","parameterTypes":["double"] }, 
+    {"name":"setCenterY","parameterTypes":["double"] }, 
+    {"name":"setRadius","parameterTypes":["double"] }
+  ]
+},
+{
+  "name":"javafx.scene.shape.Rectangle"
+},
+{
+  "name":"javafx.scene.shape.SVGPath"
+},
+{
+  "name":"javafx.scene.shape.Shape",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"setFill","parameterTypes":["javafx.scene.paint.Paint"] }]
+},
+{
+  "name":"javafx.scene.text.Font"
+},
+{
+  "name":"javafx.scene.text.Text"
+},
+{
+  "name":"javafx.scene.transform.Transform"
+},
+{
+  "name":"javafx.scene.web.WebView"
+},
+{
+  "name":"javafx.stage.PopupWindow"
+},
+{
+  "name":"javafx.stage.Stage"
+},
+{
+  "name":"javafx.stage.Window"
+},
+{
+  "name":"org.ohosdev.hapviewer.App",
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"main","parameterTypes":["java.lang.String[]"] }
+  ]
+},
+{
+  "name":"org.ohosdev.hapviewer.Controller",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"fileOpenClick","parameterTypes":["javafx.event.ActionEvent"] }
+  ]
+},
+{
+  "name":"org.ohosdev.hapviewer.ctrl.About",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"back","parameterTypes":["javafx.scene.input.MouseEvent"] }
+  ]
+},
+{
+  "name":"org.ohosdev.hapviewer.ctrl.Index",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "methods":[
+    {"name":"<init>","parameterTypes":[] }, 
+    {"name":"copyOnClick","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"fileOpenClick","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"fileSettingsClick","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"helpAbout","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"rootPaneOnDragDropped","parameterTypes":["javafx.scene.input.DragEvent"] }, 
+    {"name":"rootPaneOnDragOver","parameterTypes":["javafx.scene.input.DragEvent"] }, 
+    {"name":"toolInstall","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"toolUninstall","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"toolUninstallAndReinstall","parameterTypes":["javafx.event.ActionEvent"] }, 
+    {"name":"toolUnpack","parameterTypes":["javafx.event.ActionEvent"] }
+  ]
+},
+{
+  "name":"sun.java2d.marlin.DMarlinRenderingEngine",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}]
+},
+{
+  "name":"sun.security.provider.DRBG",
+  "methods":[{"name":"<init>","parameterTypes":["java.security.SecureRandomParameters"] }]
+},
+{
+  "name":"sun.security.provider.MD5",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.SHA2$SHA256",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+}
+]

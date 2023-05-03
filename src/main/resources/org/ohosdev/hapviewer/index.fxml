@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDropped="#rootPaneOnDragDropped" onDragOver="#rootPaneOnDragOver" prefHeight="191.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ohosdev.hapviewer.ctrl.Index">
+   <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="512.0">
+      <menus>
+         <Menu mnemonicParsing="false" text="文件">
+            <items>
+               <MenuItem fx:id="fileOpen" mnemonicParsing="false" onAction="#fileOpenClick" text="打开..." />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem fx:id="fileSettings" mnemonicParsing="false" onAction="#fileSettingsClick" text="设置" />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem fx:id="fileExit" mnemonicParsing="false" onAction="#fileExit" text="退出" />
+            </items>
+         </Menu>
+         <Menu mnemonicParsing="false" text="工具">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#toolInstall" text="安装（覆盖）" />
+               <MenuItem mnemonicParsing="false" onAction="#toolUninstallAndReinstall" text="安装（重装）" />
+               <MenuItem mnemonicParsing="false" onAction="#toolUninstall" text="卸载" />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem mnemonicParsing="false" onAction="#toolUnpack" text="解压" />
+               <!--<MenuItem mnemonicParsing="false" onAction="#toolResign" text="重新签名" />-->
+            </items>
+         </Menu>
+         <Menu mnemonicParsing="false" text="帮助">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#helpAbout" text="关于" />
+            </items>
+         </Menu>
+      </menus>
+   </MenuBar>
+
+   <HBox fx:id="iconWrapper" layoutX="8.0" layoutY="33.0" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: #ccc; -fx-border-width: 0; -fx-border-radius: 0;">
+      <children>
+         <ImageView fx:id="icon" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../image/icon-default.png" />
+            </image>
+         </ImageView>
+      </children>
+   </HBox>
+
+   <Pane layoutX="166.0" layoutY="33.0" prefHeight="150.0" prefWidth="338.0">
+      <!-- 1 -->
+      <Label fx:id="appNameLabel" layoutX="1.0" layoutY="3.0" prefHeight="19.0" prefWidth="70.0" text="应用名称：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="appName" layoutX="70.0" layoutY="3.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="1.0" mnemonicParsing="false" text="复制" fx:id="copy1" userData="#appName" onAction="#copyOnClick" />
+
+      <!-- 2 -->
+      <Label fx:id="packageNameLabel" layoutX="1.0" layoutY="28.0" prefHeight="19.0" prefWidth="70.0" text="应用包名：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="packageName" layoutX="70.0" layoutY="28.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="26.0" mnemonicParsing="false" text="复制" fx:id="copy2" userData="#packageName" onAction="#copyOnClick" />
+
+      <!-- 3 -->
+      <Label fx:id="versionNameLabel" layoutX="1.0" layoutY="52.0" prefHeight="19.0" prefWidth="70.0" text="版本名称：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="versionName" layoutX="70.0" layoutY="52.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="51.0" mnemonicParsing="false" text="复制" fx:id="copy3" userData="#versionName" onAction="#copyOnClick" />
+
+      <!-- 4 -->
+      <Label fx:id="versionCodeLabel" layoutX="1.0" layoutY="77.0" prefHeight="19.0" prefWidth="70.0" text="版本号码：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="versionCode" layoutX="70.0" layoutY="77.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="76.0" mnemonicParsing="false" text="复制" fx:id="copy4" userData="#versionCode" onAction="#copyOnClick" />
+
+      <!-- 5 -->
+      <Label fx:id="targetAPIVersionLabel" layoutX="1.0" layoutY="103.0" prefHeight="19.0" prefWidth="70.0" text="编译目标：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="targetAPIVersion" layoutX="70.0" layoutY="103.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="101.0" mnemonicParsing="false" text="复制" fx:id="copy5" userData="#targetAPIVersion" onAction="#copyOnClick" />
+
+      <!-- 6 -->
+      <Label fx:id="techDescLabel" layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="技术探测：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="techDesc" layoutX="70.0" layoutY="128.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="298.0" layoutY="126.0" mnemonicParsing="false" text="复制" fx:id="copy6" userData="#techDesc" onAction="#copyOnClick" />
+   </Pane>
+</Pane>

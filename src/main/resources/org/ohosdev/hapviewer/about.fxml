@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ohosdev.hapviewer.ctrl.About">
+   <Pane fx:id="backPane" onMouseClicked="#back" prefHeight="25.0" prefWidth="512.0">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" prefHeight="25.0">关闭</Label>
+   </Pane>
+
+   <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="8.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../image/author-avatar.jpg" />
+      </image>
+      <clip>
+         <Circle centerX="75" centerY="75" fill="aqua">
+            <radius>75</radius>
+         </Circle>
+      </clip>
+   </ImageView>
+
+   <Pane layoutX="166.0" layoutY="33.0" prefHeight="150.0" prefWidth="338.0">
+      <!-- 1 -->
+      <Label layoutX="1.0" layoutY="3.0" prefHeight="19.0" prefWidth="70.0" text="软件名称：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="appName" layoutX="70.0" layoutY="3.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <!-- 2 -->
+      <Label layoutX="1.0" layoutY="28.0" prefHeight="19.0" prefWidth="70.0" text="软件版本：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="appVersion" layoutX="70.0" layoutY="28.0" prefHeight="19.0" prefWidth="268.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+
+      <!-- 3 -->
+      <Label layoutX="1.0" layoutY="52.0" prefHeight="19.0" prefWidth="70.0" text="软件作者：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="author" layoutX="70.0" layoutY="52.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+
+      <!-- 4 -->
+      <Label layoutX="1.0" layoutY="77.0" prefHeight="19.0" prefWidth="70.0" text="开源仓库：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="openSourceRepo" layoutX="70.0" layoutY="77.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+
+      <!-- 5 -->
+      <Label layoutX="1.0" layoutY="103.0" prefHeight="19.0" prefWidth="70.0" text="开源社区：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="openSourceCommunity" layoutX="70.0" layoutY="103.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+
+      <!-- 6 -->
+      <Label layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="技术交流：">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="techExchanges" layoutX="70.0" layoutY="128.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </Pane>
+</Pane>

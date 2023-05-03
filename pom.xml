@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.ohosdev</groupId>
+    <artifactId>hapviewer</artifactId>
+    <version>1.0.0</version>
+    <name>HapViewer</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <javafx.version>17.0.1</javafx.version>
+        <gluonfx-maven-plugin.version>1.0.18</gluonfx-maven-plugin.version>
+        <!--<junit.version>5.8.2</junit.version>-->
+        <start-class>org.ohosdev.hapviewer.App</start-class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>11.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.16</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.9.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.gluonhq</groupId>
+                <artifactId>gluonfx-maven-plugin</artifactId>
+                <version>${gluonfx-maven-plugin.version}</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <!--
+                    <javaStaticSdkVersion>11-ea+10</javaStaticSdkVersion>
+                    -->
+                    <javafxStaticSdkVersion>${javafx.version}</javafxStaticSdkVersion>
+                    <!-- JavaFx 中使用 ResourceBundle.getBundle("xxxxxx") 的路径，如果没有则不需要配置 -->
+                    <!--<bundlesList>
+                        <list>com.mueeee.desktopjavafx</list>
+                    </bundlesList>-->
+                    <!-- 允许的资源文件后缀 -->
+                    <resourcesList>
+                        <list>.*\\.properties$</list>
+                    </resourcesList>
+                    <!-- 涉及反射的类 -->
+                    <reflectionList>
+                        <list>org.ohosdev.hapviewer.ctrl.Index</list>
+                        <list>org.ohosdev.hapviewer.ctrl.About</list>
+                    </reflectionList>
+                    <nativeImageArgs>
+                        <!-- “快速构建”模式，以减少在开发过程中生成本机可执行文件所需的时间。请注意，此模式可能会对峰值性能和生成的可执行文件的大小产生负面影响，因此建议仅用于开发目的。 -->
+                        <!--<arg>-Ob</arg>-->
+                        <!-- 现在默认启用并已弃用，因为不再需要它。 -->
+                        <!--<arg>&#45;&#45;allow-incomplete-classpath</arg>-->
+                    </nativeImageArgs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

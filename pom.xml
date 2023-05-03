@@ -14,7 +14,8 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <javafx.version>17.0.1</javafx.version>
+        <javafx.version>21-ea+5</javafx.version>
+        <javafx.staticSdk.version>21-ea+5</javafx.staticSdk.version>
         <gluonfx-maven-plugin.version>1.0.18</gluonfx-maven-plugin.version>
         <!--<junit.version>5.8.2</junit.version>-->
         <start-class>org.ohosdev.hapviewer.App</start-class>
@@ -83,7 +84,7 @@
                     <!--
                     <javaStaticSdkVersion>11-ea+10</javaStaticSdkVersion>
                     -->
-                    <javafxStaticSdkVersion>${javafx.version}</javafxStaticSdkVersion>
+                    <javafxStaticSdkVersion>${javafx.staticSdk.version}</javafxStaticSdkVersion>
                     <!-- JavaFx 中使用 ResourceBundle.getBundle("xxxxxx") 的路径，如果没有则不需要配置 -->
                     <!--<bundlesList>
                         <list>com.mueeee.desktopjavafx</list>
@@ -102,6 +103,9 @@
                         <!--<arg>-Ob</arg>-->
                         <!-- 现在默认启用并已弃用，因为不再需要它。 -->
                         <!--<arg>&#45;&#45;allow-incomplete-classpath</arg>-->
+                        <arg>--no-fallback</arg>
+                        <arg>-H:-UseServiceLoaderFeature</arg>
+                        <arg>--report-unsupported-elements-at-runtime</arg>
                     </nativeImageArgs>
                 </configuration>
                 <executions>

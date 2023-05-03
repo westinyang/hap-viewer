@@ -80,6 +80,7 @@
                 <artifactId>gluonfx-maven-plugin</artifactId>
                 <version>${gluonfx-maven-plugin.version}</version>
                 <configuration>
+                    <target>host</target>
                     <mainClass>${start-class}</mainClass>
                     <!--
                     <javaStaticSdkVersion>11-ea+10</javaStaticSdkVersion>
@@ -108,9 +109,15 @@
                         <arg>--report-unsupported-elements-at-runtime</arg>
                     </nativeImageArgs>
                     <releaseConfiguration>
+                        <!-- all targets -->
+                        <!--<packageType></packageType>-->
                         <description>A cross-platform HAP viewer (API 9+ support)</description>
                         <vendor>OHOS Dev</vendor>
                         <version>${version}</version>
+                        <!-- macOS -->
+                        <macAppStore>false</macAppStore>
+                        <macSigningUserName>OHOS Dev</macSigningUserName>
+                        <!--<macAppCategory>public.app-category.utilities</macAppCategory>-->
                     </releaseConfiguration>
                 </configuration>
                 <executions>

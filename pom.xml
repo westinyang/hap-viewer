@@ -107,6 +107,11 @@
                         <arg>-H:-UseServiceLoaderFeature</arg>
                         <arg>--report-unsupported-elements-at-runtime</arg>
                     </nativeImageArgs>
+                    <releaseConfiguration>
+                        <description>A cross-platform HAP viewer (API 9+ support)</description>
+                        <vendor>westinyang</vendor>
+                        <version>${version}</version>
+                    </releaseConfiguration>
                 </configuration>
                 <executions>
                     <execution>

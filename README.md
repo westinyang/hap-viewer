@@ -19,7 +19,7 @@
 ## 开发技术
 
 > GraalVM让Java再次变得强大，使用`NativeImage`把程序编译为目标平台的可执行文件，脱离jvm直接运行，启动速度快，内存负载低。  
-> 关于GraalVM技术的最佳实践和教程，请参考我的另一个开源项目：[westinyang/java-graalvm-start](https://github.com/westinyang/java-graalvm-start)
+> 关于GraalVM技术的最佳实践和教程，请参考我的另一个开源项目：[westinyang/java-graalvm-start](https://gitee.com/westinyang/java-graalvm-start)
 
 - GraalVM CE 22.3.0 (Java 17) Native Image
 - JavaFX 21-ea+5

@@ -35,7 +35,7 @@
         <dependency>
             <groupId>org.controlsfx</groupId>
             <artifactId>controlsfx</artifactId>
-            <version>11.1.1</version>
+            <version>11.1.2</version>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -104,9 +104,7 @@
                         <!--<arg>-Ob</arg>-->
                         <!-- 现在默认启用并已弃用，因为不再需要它。 -->
                         <!--<arg>&#45;&#45;allow-incomplete-classpath</arg>-->
-                        <arg>--no-fallback</arg>
-                        <arg>-H:-UseServiceLoaderFeature</arg>
-                        <arg>--report-unsupported-elements-at-runtime</arg>
+                        <arg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED</arg>
                     </nativeImageArgs>
                     <releaseConfiguration>
                         <!-- all targets -->

@@ -11,9 +11,6 @@
       "pattern":"\\Qorg/ohosdev/hapviewer/about.fxml\\E"
     }, 
     {
-      "pattern":"\\Qorg/ohosdev/hapviewer/hello-view.fxml\\E"
-    }, 
-    {
       "pattern":"\\Qorg/ohosdev/hapviewer/index.fxml\\E"
     }
   ]},
@@ -22,7 +19,6 @@
       "name":"com.sun.javafx.tk.quantum.QuantumMessagesBundle",
       "locales":[
         "", 
-        "und", 
         "zh-CN"
       ]
     }, 
@@ -30,15 +26,7 @@
       "name":"com/sun/glass/ui/win/themes",
       "locales":[
         "", 
-        "und", 
         "zh-CN"
-      ]
-    }, 
-    {
-      "name":"sun.awt.resources.awt",
-      "classNames":[
-        "sun.awt.resources.awt", 
-        "sun.awt.resources.awt_zh_CN"
       ]
     }
   ]

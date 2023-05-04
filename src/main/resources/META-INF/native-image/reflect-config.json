@@ -356,15 +356,6 @@
   ]
 },
 {
-  "name":"org.ohosdev.hapviewer.Controller",
-  "allDeclaredFields":true,
-  "queryAllDeclaredMethods":true,
-  "methods":[
-    {"name":"<init>","parameterTypes":[] }, 
-    {"name":"fileOpenClick","parameterTypes":["javafx.event.ActionEvent"] }
-  ]
-},
-{
   "name":"org.ohosdev.hapviewer.ctrl.About",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -390,10 +381,6 @@
     {"name":"toolUninstallAndReinstall","parameterTypes":["javafx.event.ActionEvent"] }, 
     {"name":"toolUnpack","parameterTypes":["javafx.event.ActionEvent"] }
   ]
-},
-{
-  "name":"sun.java2d.marlin.DMarlinRenderingEngine",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"sun.misc.Unsafe",

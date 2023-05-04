@@ -11,6 +11,7 @@ import org.ohosdev.hapviewer.common.Const;
 
 import java.io.IOException;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 /**
  * 启动程序

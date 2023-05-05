@@ -16,6 +16,11 @@
 
 - https://gitee.com/ohos-dev/hap-viewer/releases
 
+## 使用说明
+
+- 安装和卸载功能需要自己配置好hdc到环境变量
+- 由于目前hdc的bug，hdc list targets不显示Android设备，但安装时候会监测到Android设备，如果同时连接Android和OpenHarmony设备，使用hdc安装命令会提示需要指定一个（我觉得这是个bug），那目前软件本身还没有做设备列表的读取和选择，只支持连接一个设备进行操作
+
 ## 开发技术
 
 > GraalVM让Java再次变得强大，使用`NativeImage`把程序编译为目标平台的可执行文件，脱离jvm直接运行，启动速度快，内存负载低。  
@@ -39,7 +44,7 @@
 
 - Windows 7 `未测试，理论兼容`
 - Windows 10/11 `已测试`
-- macOS Big Sur 11.x (Intel) `已测试`
+- macOS 11.x Big Sur (Intel) `已测试`
 - Ubuntu 20.04 `已测试`
 
 ## 截图预览
@@ -48,10 +53,11 @@
 
 ## 视频演示
 
-x
+- https://www.bilibili.com/video/BV1HX4y127ub
 
 ## 许可声明
 
+- 本项目是以Apache2.0许可开源，如果衍生或商用需保留原始版权和许可声明即可
 - 软件图标出处：https://www.flaticon.com/free-icon/apk_9704667
 
 ## 赞助捐赠

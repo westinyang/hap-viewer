@@ -6,11 +6,16 @@
 
 一个跨平台的hap查看器，方便开发者在电脑上预览hap的信息，并提供一键安装到设备等功能
 
-目前支持解析的应用：
+目前支持解析的应用
 
 - 应用平台：OpenHarmony、HarmonyOS
 - 编译目标：API9+
 - 应用模型：Stage（FA模型的解析暂未兼容，后续实现...）
+
+开源仓库
+
+- [Gitee](https://gitee.com/ohos-dev/hap-viewer)
+- [Github](https://github.com/ohos-dev/hap-viewer)
 
 ## 下载安装
 

@@ -102,6 +102,7 @@
                     <nativeImageArgs>
                         <!-- “快速构建”模式，以减少在开发过程中生成本机可执行文件所需的时间。请注意，此模式可能会对峰值性能和生成的可执行文件的大小产生负面影响，因此建议仅用于开发目的。 -->
                         <!--<arg>-Ob</arg>-->
+                        <arg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED</arg>
                     </nativeImageArgs>
                     <releaseConfiguration>
                         <!-- all targets -->

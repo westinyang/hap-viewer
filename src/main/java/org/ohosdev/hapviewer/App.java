@@ -60,6 +60,10 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        String osName = System.getProperty("os.name", "");
+        if (Pattern.matches("Linux.*", osName)) {
+            System.setProperty("prism.forceGPU", "true");
+        }
         try {
             App.STARTUP_PARAM_1 = args[0];
         } catch (Exception ignored) {

@@ -17,6 +17,11 @@
 - [Gitee](https://gitee.com/ohos-dev/hap-viewer)
 - [Github](https://github.com/ohos-dev/hap-viewer)
 
+### 系列项目
+
+- **电脑版（跨平台）**：[ohos-dev/hap-viewer](https://gitee.com/ohos-dev/hap-viewer)
+- 手机版（Android）：[ohos-dev/hap-viewer-android](https://gitee.com/ohos-dev/hap-viewer-android)
+
 ## 下载安装
 
 - https://gitee.com/ohos-dev/hap-viewer/releases

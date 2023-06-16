@@ -1,6 +1,5 @@
 package org.ohosdev.hapviewer.model;
 
-import cn.hutool.core.util.StrUtil;
 import javafx.scene.image.Image;
 
 import java.util.Set;
@@ -33,7 +32,7 @@ public class HapInfo {
 
     public String getTechDesc() {
         if (techList != null && techList.size() > 0) {
-            techDesc = StrUtil.join("、", techList);
+            techDesc = String.join("、", techList);
         } else {
             techDesc = "原生开发或未知开发技术";
         }

@@ -209,7 +209,7 @@ public class Index implements Initializable {
             icon.setImage(hapInfo.icon);
         } catch (IOException | RuntimeException e) {
             e.printStackTrace();
-            Platform.runLater(() -> FxUtil.alert(Alert.AlertType.ERROR, "hap文件解析失败（目前仅支持API9+编译的安装包）"));
+            Platform.runLater(() -> FxUtil.alert(Alert.AlertType.ERROR, "hap文件解析失败，目前仅支持解析 API9+ (Stage模型) 的应用安装包"));
             return;
         }
 

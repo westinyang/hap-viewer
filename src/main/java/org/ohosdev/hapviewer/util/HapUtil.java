@@ -53,16 +53,23 @@ public class HapUtil {
 
             // 解析图标
             JSONArray moduleAbilities = module.getByPath("module.abilities", JSONArray.class);
+            JSONObject targetAbility = null;
+            try {
+                targetAbility = (JSONObject) moduleAbilities.get(0);
+            } catch (Exception ignore) {}
             for (Object item : moduleAbilities) {
                 JSONObject ability = (JSONObject) item;
                 if (hapInfo.mainElement.equals(ability.get("name", String.class))) {
-                    String iconName = ability.get("icon", String.class).split(":")[1];
-                    String iconPath = String.format("resources/base/media/%s.png", iconName);
-                    hapInfo.iconPath = iconPath;
-                    hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
-                    hapInfo.icon = getEntryToImage(zipFile, iconPath);
+                    targetAbility = ability;
                     break;
                 }
+            }
+            if (targetAbility != null) {
+                String iconName = targetAbility.get("icon", String.class).split(":")[1];
+                String iconPath = String.format("resources/base/media/%s.png", iconName);
+                hapInfo.iconPath = iconPath;
+                hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
+                hapInfo.icon = getEntryToImage(zipFile, iconPath);
             }
 
             // 解析名称
@@ -75,7 +82,9 @@ public class HapUtil {
             Set<String> techList = new HashSet<>();
             ZipUtil.read(zipFile, (zipEntry) -> {
                 // System.out.println(zipEntry.getName());
-                if (ReUtil.contains("libs\\/arm.*\\/libcocos.so", zipEntry.getName())) {
+                if (ReUtil.contains("libs\\/arm.*\\/libcocos.so", zipEntry.getName())
+                        || ReUtil.contains("ets\\/workers\\/CocosWorker.abc", zipEntry.getName())
+                ) {
                     techList.add("Cocos");
                 }
             });

@@ -86,6 +86,10 @@ public class HapUtil {
                         || ReUtil.contains("ets\\/workers\\/CocosWorker.abc", zipEntry.getName())
                 ) {
                     techList.add("Cocos");
+                } else if (ReUtil.contains("libs\\/arm.*\\/libflutter.so", zipEntry.getName())) {
+                    techList.add("Flutter");
+                } else if (ReUtil.contains("libs\\/arm.*\\/libQt5Core.so", zipEntry.getName())) {
+                    techList.add("Qt");
                 }
             });
             hapInfo.techList = techList;

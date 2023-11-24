@@ -34,6 +34,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.zip.ZipEntry;
 
@@ -206,7 +207,7 @@ public class Index implements Initializable {
         try {
             hapInfo = HapUtil.parse(hapFilePath);
             currentHapInfo = hapInfo;
-            icon.setImage(hapInfo.icon);
+            icon.setImage(Objects.requireNonNullElseGet(hapInfo.icon, () -> new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/icon-default.png")))));
         } catch (IOException | RuntimeException e) {
             e.printStackTrace();
             Platform.runLater(() -> FxUtil.alert(Alert.AlertType.ERROR, "hap文件解析失败，目前仅支持解析 API9+ (Stage模型) 的应用安装包"));

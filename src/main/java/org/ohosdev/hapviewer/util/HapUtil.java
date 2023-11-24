@@ -54,6 +54,9 @@ public class HapUtil {
 
             // 解析图标
             JSONArray moduleAbilities = module.getByPath("module.abilities", JSONArray.class);
+            if (moduleAbilities == null) {
+                moduleAbilities = module.getByPath("module.extensionAbilities", JSONArray.class);
+            }
             JSONObject targetAbility = null;
             try {
                 targetAbility = (JSONObject) moduleAbilities.get(0);
@@ -66,11 +69,13 @@ public class HapUtil {
                 }
             }
             if (targetAbility != null) {
-                String iconName = targetAbility.get("icon", String.class).split(":")[1];
-                String iconPath = String.format("resources/base/media/%s.png", iconName);
-                hapInfo.iconPath = iconPath;
-                hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
-                hapInfo.icon = getEntryToImage(zipFile, iconPath);
+                if (targetAbility.containsKey("icon")) {
+                    String iconName = targetAbility.get("icon", String.class).split(":")[1];
+                    String iconPath = String.format("resources/base/media/%s.png", iconName);
+                    hapInfo.iconPath = iconPath;
+                    hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
+                    hapInfo.icon = getEntryToImage(zipFile, iconPath);
+                }
                 // 同时记录下label，用于下面解析名称
                 hapInfo.labelName = targetAbility.get("label", String.class).split(":")[1];
             }

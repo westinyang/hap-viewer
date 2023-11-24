@@ -13,6 +13,7 @@ public class HapInfo {
     public Image icon;
     public String iconPath;
     public byte[] iconBytes;
+    public String labelName;
     public String appName;
     public String packageName;
     public String versionName;

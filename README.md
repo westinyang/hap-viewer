@@ -10,7 +10,7 @@
 
 - 应用平台：OpenHarmony、HarmonyOS
 - 编译目标：API9+
-- 应用模型：Stage（FA模型的解析暂未兼容，后续实现...）
+- 应用模型：Stage（FA模型暂不考虑）
 
 开源仓库
 

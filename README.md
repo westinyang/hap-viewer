@@ -63,7 +63,9 @@
 
 ## 视频演示
 
-- https://www.bilibili.com/video/BV1HX4y127ub
+- [OpenHarmony首个跨平台的hap查看器，将Open进行到底，为开源鸿蒙生态助力](https://www.bilibili.com/video/BV1HX4y127ub)
+- [开源鸿蒙hap查看器，新增探测Flutter、Qt技术，安卓版新主题](https://www.bilibili.com/video/BV1cg4y197mc)
+- [开源鸿蒙hap查看器，里程碑式新算法，API9~10、系统应用也支持](https://www.bilibili.com/video/BV1Wb4y1T7VL)
 
 ## 许可声明
 

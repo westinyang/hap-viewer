@@ -14,13 +14,13 @@
 
 开源仓库
 
-- [Gitee](https://gitee.com/ohos-dev/hap-viewer)
-- [Github](https://github.com/ohos-dev/hap-viewer)
+- [Gitee](https://gitee.com/westinyang/hap-viewer)
+- [Github](https://github.com/westinyang/hap-viewer)
 
 ### 系列项目
 
-- **电脑版（跨平台）**：[westinyang/hap-viewer](https://gitee.com/ohos-dev/hap-viewer)
-- 手机版（Android）：[westinyang/hap-viewer-android](https://gitee.com/ohos-dev/hap-viewer-android)
+- **电脑版（跨平台）**：[westinyang/hap-viewer](https://gitee.com/westinyang/hap-viewer)
+- 手机版（Android）：[westinyang/hap-viewer-android](https://gitee.com/westinyang/hap-viewer-android)
 
 ### 衍生项目
 
@@ -28,7 +28,7 @@
 
 ## 下载安装
 
-- https://gitee.com/ohos-dev/hap-viewer/releases
+- https://gitee.com/westinyang/hap-viewer/releases
 
 ## 使用说明
 

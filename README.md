@@ -19,8 +19,12 @@
 
 ### 系列项目
 
-- **电脑版（跨平台）**：[ohos-dev/hap-viewer](https://gitee.com/ohos-dev/hap-viewer)
-- 手机版（Android）：[ohos-dev/hap-viewer-android](https://gitee.com/ohos-dev/hap-viewer-android)
+- **电脑版（跨平台）**：[westinyang/hap-viewer](https://gitee.com/ohos-dev/hap-viewer)
+- 手机版（Android）：[westinyang/hap-viewer-android](https://gitee.com/ohos-dev/hap-viewer-android)
+
+### 衍生项目
+
+- [hapv-cli](https://gitee.com/ericple/hapv-cli) `命令行版的hap查看器，目前由@ericple维护`
 
 ## 下载安装
 
@@ -48,7 +52,7 @@
 - [x] 技术探测（原生开发、Cocos、Flutter、Qt）
 - [x] 实用工具（安装、重装、卸载、解压）
 - [x] 解析 API9 Stage 模型的安装包
-- [ ] 解析 API9 FA 模型 (ArkTS/JS) 的安装包
+- [ ] ~~解析 API9 FA 模型 (ArkTS/JS) 的安装包~~
 
 ## 兼容测试
 

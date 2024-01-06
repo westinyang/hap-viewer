@@ -94,7 +94,7 @@
       </Label>
 
       <!-- 6 -->
-      <Label layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="技术交流：">
+      <Label layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="技术咨询：">
          <font>
             <Font size="14.0" />
          </font>

@@ -43,17 +43,17 @@ public class About implements Initializable {
             }
             event.consume();
         });
-        techExchanges.setText("752399947");
+        techExchanges.setText("点此跳转");
         techExchanges.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://b.r.sn.cn/gXjhXz");
+                CommandUtil.openInDefaultBrowser("https://gitee.com/westinyang/openharmony-creation/blob/master/README.md");
             }
             event.consume();
         });
         author.setText("westinyang");
         author.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://docs.qq.com/doc/DQVlkcnlQUEFiQ3Rl");
+                CommandUtil.openInDefaultBrowser("https://space.bilibili.com/74433635");
             }
             event.consume();
         });

@@ -17,6 +17,8 @@
 - [Gitee](https://gitee.com/westinyang/hap-viewer)
 - [Github](https://github.com/westinyang/hap-viewer)
 
+> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
+
 ### 系列项目
 
 - **电脑版（跨平台）**：[westinyang/hap-viewer](https://gitee.com/westinyang/hap-viewer)

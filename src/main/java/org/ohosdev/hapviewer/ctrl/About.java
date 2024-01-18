@@ -20,40 +20,51 @@ public class About implements Initializable {
 
     public Pane rootPane;
     public Pane backPane;
-    public Label appName, appVersion, openSourceRepo, openSourceCommunity, techExchanges, author;
+    public Label label1, label2, label3, label4, label5, label6;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         backPane.setStyle("-fx-background-color: #f0f0f0;");
         rootPane.setStyle("-fx-background-color: #ffffff");
 
-        appName.setText(Const.APP_NAME);
-        appVersion.setText(Const.APP_VERSION);
-        openSourceRepo.setText("https://gitee.com/ohos-dev/hap-viewer");
-        openSourceRepo.setOnMouseClicked(event -> {
+        // 软件名称
+        label1.setText(Const.APP_NAME);
+
+        // 软件版本
+        label2.setText(Const.APP_VERSION);
+
+        // 软件作者
+        label3.setText("westinyang");
+        label3.setOnMouseClicked(event -> {
+            if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
+                CommandUtil.openInDefaultBrowser("https://kaihongpai.feishu.cn/wiki/CqWLwJRadibxztkrIWZcogWxnXd");
+            }
+            event.consume();
+        });
+
+        // 哔哩哔哩
+        label4.setText("space.bilibili.com/74433635");
+        label4.setOnMouseClicked(event -> {
+            if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
+                CommandUtil.openInDefaultBrowser("https://space.bilibili.com/74433635");
+            }
+            event.consume();
+        });
+
+        // 开源仓库
+        label5.setText("gitee.com/ohos-dev/hap-viewer");
+        label5.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
                 CommandUtil.openInDefaultBrowser("https://gitee.com/ohos-dev/hap-viewer");
             }
             event.consume();
         });
-        openSourceCommunity.setText("https://gitee.com/ohos-dev");
-        openSourceCommunity.setOnMouseClicked(event -> {
+
+        // 知识星球
+        label6.setText("了解/加入开鸿派知识星球");
+        label6.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://gitee.com/ohos-dev");
-            }
-            event.consume();
-        });
-        techExchanges.setText("点此跳转");
-        techExchanges.setOnMouseClicked(event -> {
-            if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://gitee.com/westinyang/openharmony-creation/blob/master/README.md");
-            }
-            event.consume();
-        });
-        author.setText("westinyang");
-        author.setOnMouseClicked(event -> {
-            if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://space.bilibili.com/74433635");
+                CommandUtil.openInDefaultBrowser("https://kaihongpai.feishu.cn/wiki/Y4ajwv6uFi73AwkLxgbcdwctn2g");
             }
             event.consume();
         });

@@ -30,7 +30,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="appName" layoutX="70.0" layoutY="3.0" prefHeight="19.0" prefWidth="268.0" text="">
+      <Label fx:id="label1" layoutX="70.0" layoutY="3.0" prefHeight="19.0" prefWidth="268.0" text="">
          <font>
             <Font size="14.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="appVersion" layoutX="70.0" layoutY="28.0" prefHeight="19.0" prefWidth="268.0" text="">
+      <Label fx:id="label2" layoutX="70.0" layoutY="28.0" prefHeight="19.0" prefWidth="268.0" text="">
          <font>
             <Font size="14.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="author" layoutX="70.0" layoutY="52.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+      <Label fx:id="label3" layoutX="70.0" layoutY="52.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -64,12 +64,12 @@
       </Label>
 
       <!-- 4 -->
-      <Label layoutX="1.0" layoutY="77.0" prefHeight="19.0" prefWidth="70.0" text="开源仓库：">
+      <Label layoutX="1.0" layoutY="77.0" prefHeight="19.0" prefWidth="70.0" text="哔哩哔哩：">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="openSourceRepo" layoutX="70.0" layoutY="77.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+      <Label fx:id="label4" layoutX="70.0" layoutY="77.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -79,12 +79,12 @@
       </Label>
 
       <!-- 5 -->
-      <Label layoutX="1.0" layoutY="103.0" prefHeight="19.0" prefWidth="70.0" text="开源社区：">
+      <Label layoutX="1.0" layoutY="103.0" prefHeight="19.0" prefWidth="70.0" text="开源仓库：">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="openSourceCommunity" layoutX="70.0" layoutY="103.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+      <Label fx:id="label5" layoutX="70.0" layoutY="103.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
          <font>
             <Font size="14.0" />
          </font>
@@ -94,12 +94,12 @@
       </Label>
 
       <!-- 6 -->
-      <Label layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="技术咨询：">
+      <Label layoutX="1.0" layoutY="128.0" prefHeight="19.0" prefWidth="70.0" text="知识星球：">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="techExchanges" layoutX="70.0" layoutY="128.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
+      <Label fx:id="label6" layoutX="70.0" layoutY="128.0" prefHeight="19.0" prefWidth="268.0" text="" underline="true">
          <font>
             <Font size="14.0" />
          </font>

@@ -53,7 +53,7 @@
 - [x] 解析应用（基本信息、逆向解析resources.index读取应用名称）
 - [x] 技术探测（原生开发、Cocos、Flutter、Qt）
 - [x] 查看菜单（权限信息、更多信息）
-- [x] 实用工具（安装、重装、打开、关闭、卸载、解压） `部分操作仅支持OpenHarmony`
+- [x] 实用工具（安装、重装、打开、关闭、卸载、解压） `部分操作仅支持OpenHarmony设备`
 - [x] 解析 API9 Stage 模型的安装包
 - [ ] ~~解析 API9 FA 模型 (ArkTS/JS) 的安装包~~
 
@@ -71,8 +71,9 @@
 ## 视频演示
 
 - [OpenHarmony首个跨平台的hap查看器，将Open进行到底，为开源鸿蒙生态助力](https://www.bilibili.com/video/BV1HX4y127ub)
-- [开源鸿蒙hap查看器，新增探测Flutter、Qt技术，安卓版新主题](https://www.bilibili.com/video/BV1cg4y197mc)
-- [开源鸿蒙hap查看器，里程碑式新算法，API9~10、系统应用也支持](https://www.bilibili.com/video/BV1Wb4y1T7VL)
+- [开源鸿蒙hap查看器v1.0.1，新增探测Flutter、Qt技术，安卓版新主题](https://www.bilibili.com/video/BV1cg4y197mc)
+- [开源鸿蒙hap查看器v1.0.3，里程碑式新算法，API9~10、系统应用也支持](https://www.bilibili.com/video/BV1Wb4y1T7VL)
+- [开源鸿蒙hap查看器v1.1.0，支持查看权限和更多信息，打开关闭应用](https://www.bilibili.com/video/BV1jK4y1i7CM)
 
 ## 许可声明
 

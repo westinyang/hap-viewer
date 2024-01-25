@@ -52,19 +52,19 @@ public class About implements Initializable {
         });
 
         // 开源仓库
-        label5.setText("gitee.com/ohos-dev/hap-viewer");
+        label5.setText("gitee.com/westinyang/hap-viewer");
         label5.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://gitee.com/ohos-dev/hap-viewer");
+                CommandUtil.openInDefaultBrowser("https://gitee.com/westinyang/hap-viewer");
             }
             event.consume();
         });
 
-        // 知识星球
-        label6.setText("了解/加入开鸿派知识星球");
+        // 开源社区
+        label6.setText("gitee.com/ohos-dev");
         label6.setOnMouseClicked(event -> {
             if (event.getButton().name().equals(MouseButton.PRIMARY.name())) {
-                CommandUtil.openInDefaultBrowser("https://kaihongpai.feishu.cn/wiki/Y4ajwv6uFi73AwkLxgbcdwctn2g");
+                CommandUtil.openInDefaultBrowser("https://gitee.com/ohos-dev");
             }
             event.consume();
         });

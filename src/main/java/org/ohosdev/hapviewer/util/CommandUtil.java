@@ -115,6 +115,72 @@ public class CommandUtil {
         }
     }
 
+    public static void openApp(HapInfo hapInfo) {
+        // 检查hap路径
+        if (hapInfo == null || StrUtil.isEmpty(hapInfo.hapFilePath)) {
+            FxUtil.notification("请先打开一个hap文件");
+            return;
+        }
+
+        // 检查环境
+        if (checkEnv()) {
+            return;
+        }
+
+        try {
+            ThreadUtil.execAsync(() -> {
+                // Platform.runLater(() -> FxUtil.notification("正在打开..."));
+                Process uninstallProcess = RuntimeUtil.exec("hdc", "shell", "aa start -a " + hapInfo.mainElement + " -b " + hapInfo.packageName);
+                try {
+                    uninstallProcess.waitFor();
+                } catch (InterruptedException ignored) {
+                }
+                var uninstallResult = RuntimeUtil.getResult(uninstallProcess);
+                if (uninstallResult.contains("start ability successfully.")) {
+                    //Platform.runLater(() -> FxUtil.notification("打开完成"));
+                } else {
+                    Platform.runLater(() -> FxUtil.notification("未安装此应用"));
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            FxUtil.notification(e.getMessage());
+        }
+    }
+
+    public static void closeApp(HapInfo hapInfo) {
+        // 检查hap路径
+        if (hapInfo == null || StrUtil.isEmpty(hapInfo.hapFilePath)) {
+            FxUtil.notification("请先打开一个hap文件");
+            return;
+        }
+
+        // 检查环境
+        if (checkEnv()) {
+            return;
+        }
+
+        try {
+            ThreadUtil.execAsync(() -> {
+                // Platform.runLater(() -> FxUtil.notification("正在打开..."));
+                Process uninstallProcess = RuntimeUtil.exec("hdc", "shell", "aa force-stop "+ hapInfo.packageName);
+                try {
+                    uninstallProcess.waitFor();
+                } catch (InterruptedException ignored) {
+                }
+                var uninstallResult = RuntimeUtil.getResult(uninstallProcess);
+                if (uninstallResult.contains("force stop process successfully.")) {
+                    //Platform.runLater(() -> FxUtil.notification("打开完成"));
+                } else {
+                    Platform.runLater(() -> FxUtil.notification("未安装此应用"));
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            FxUtil.notification(e.getMessage());
+        }
+    }
+
     /**
      * 检查环境，hdc是否正确配置，oh设备是否连接
      * @return 环境是否正常

@@ -1,7 +1,10 @@
 package org.ohosdev.hapviewer.model;
 
+import cn.hutool.json.JSONArray;
 import javafx.scene.image.Image;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -25,6 +28,11 @@ public class HapInfo {
 
     /* module. */
     public String mainElement;
+    public JSONArray requestPermissions;
+    public List<String> requestPermissionNames;
+
+    /* more */
+    public Map<String, Object> moreInfo;
 
     /* 额外 */
     public String hapFilePath;

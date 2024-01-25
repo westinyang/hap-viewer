@@ -17,10 +17,18 @@
                <MenuItem fx:id="fileExit" mnemonicParsing="false" onAction="#fileExit" text="退出" />
             </items>
          </Menu>
+         <Menu mnemonicParsing="false" text="查看">
+            <items>
+               <MenuItem fx:id="viewPermissions" mnemonicParsing="false" onAction="#viewPermissions" text="权限信息" />
+               <MenuItem fx:id="viewMore" mnemonicParsing="false" onAction="#viewMore" text="更多信息" />
+            </items>
+         </Menu>
          <Menu mnemonicParsing="false" text="工具">
             <items>
                <MenuItem mnemonicParsing="false" onAction="#toolInstall" text="安装（覆盖）" />
                <MenuItem mnemonicParsing="false" onAction="#toolUninstallAndReinstall" text="安装（重装）" />
+               <MenuItem mnemonicParsing="false" onAction="#toolOpen" text="打开" />
+               <MenuItem mnemonicParsing="false" onAction="#toolClose" text="关闭" />
                <MenuItem mnemonicParsing="false" onAction="#toolUninstall" text="卸载" />
                <SeparatorMenuItem mnemonicParsing="false" />
                <MenuItem mnemonicParsing="false" onAction="#toolUnpack" text="解压" />

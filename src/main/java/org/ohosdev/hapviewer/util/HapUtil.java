@@ -12,8 +12,7 @@ import org.ohosdev.hapviewer.model.HapInfo;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.MatchResult;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -51,6 +50,15 @@ public class HapUtil {
 
             // module.
             hapInfo.mainElement = module.getByPath("module.mainElement", String.class);
+            // 解析权限
+            hapInfo.requestPermissions = module.getByPath("module.requestPermissions", JSONArray.class);
+            if (hapInfo.requestPermissions != null && !hapInfo.requestPermissions.isEmpty()) {
+                hapInfo.requestPermissionNames = new ArrayList<>();
+                for (Object item : hapInfo.requestPermissions) {
+                    JSONObject itemObj = (JSONObject) item;
+                    hapInfo.requestPermissionNames.add(itemObj.get("name", String.class));
+                }
+            }
 
             // 解析图标
             JSONArray moduleAbilities = module.getByPath("module.abilities", JSONArray.class);
@@ -117,6 +125,22 @@ public class HapUtil {
                 }
             });
             hapInfo.techList = techList;
+
+            // 更多信息
+            hapInfo.moreInfo = new LinkedHashMap<>();
+            hapInfo.moreInfo.put("appName", hapInfo.appName);
+            hapInfo.moreInfo.put("bundleName", hapInfo.packageName);
+            hapInfo.moreInfo.put("iconPath", hapInfo.iconPath);
+            hapInfo.moreInfo.put("vendor", module.getByPath("app.vendor", String.class));
+            hapInfo.moreInfo.put("versionName", hapInfo.versionName);
+            hapInfo.moreInfo.put("versionCode", hapInfo.versionCode);
+            hapInfo.moreInfo.put("targetAPIVersion", hapInfo.targetAPIVersion);
+            hapInfo.moreInfo.put("minAPIVersion", module.getByPath("app.minAPIVersion", String.class));
+            hapInfo.moreInfo.put("apiReleaseType", hapInfo.apiReleaseType);
+            hapInfo.moreInfo.put("mainElement", hapInfo.mainElement);
+            hapInfo.moreInfo.put("deviceTypes", module.getByPath("module.deviceTypes", JSONArray.class));
+            hapInfo.moreInfo.put("virtualMachine", module.getByPath("module.virtualMachine", String.class));
+            hapInfo.moreInfo.put("techList", hapInfo.techList);
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("HAP file parse failed");

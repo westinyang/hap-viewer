@@ -4,6 +4,8 @@
 
 ## 项目介绍
 
+> 技术咨询请来这里：[关于作者](https://kaihongpai.feishu.cn/wiki/CqWLwJRadibxztkrIWZcogWxnXd)
+
 一个跨平台的hap查看器，方便开发者在电脑上预览hap的信息，并提供一键安装到设备等功能
 
 目前支持解析的应用
@@ -16,8 +18,6 @@
 
 - [Gitee](https://gitee.com/westinyang/hap-viewer)
 - [Github](https://github.com/westinyang/hap-viewer)
-
-> 技术咨询来这里 [联系方式](https://gitee.com/westinyang/openharmony-creation/blob/master/README.md)
 
 ### 系列项目
 

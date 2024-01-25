@@ -5,6 +5,7 @@ import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.io.file.FileNameUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.ZipUtil;
+import cn.hutool.json.JSONUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.ohosdev.hapviewer.App;
 import org.ohosdev.hapviewer.common.Config;
@@ -35,6 +37,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.zip.ZipEntry;
 
@@ -169,6 +172,14 @@ public class Index implements Initializable {
         CommandUtil.installHap(currentHapInfo, false);
     }
 
+    public void toolOpen(ActionEvent actionEvent) {
+        CommandUtil.openApp(currentHapInfo);
+    }
+
+    public void toolClose(ActionEvent actionEvent) {
+        CommandUtil.closeApp(currentHapInfo);
+    }
+
     public void toolUnpack(ActionEvent actionEvent) {
         HapInfo hapInfo = currentHapInfo;
         // 检查hap路径
@@ -265,5 +276,109 @@ public class Index implements Initializable {
         clipboard.setContent(cc);
 
         FxUtil.notification(String.format("已复制 %s", name));
+    }
+
+    public void viewPermissions(ActionEvent actionEvent) {
+        HapInfo hapInfo = currentHapInfo;
+        // 检查hap路径
+        if (hapInfo == null || StrUtil.isEmpty(hapInfo.hapFilePath)) {
+            FxUtil.notification("请先打开一个hap文件");
+            return;
+        }
+
+        var requestPermissionNamesStr = "无权限";
+        if (hapInfo.requestPermissions != null) {
+            requestPermissionNamesStr = JSONUtil.toJsonPrettyStr(hapInfo.requestPermissionNames);
+        }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("权限信息");
+        alert.setHeaderText("");
+        alert.setContentText(requestPermissionNamesStr);
+        alert.getDialogPane().setGraphic(null);
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icon/icon.png"))));
+
+        // 获取 alert 对话框的“确定”按钮对象，并将文本更改为“复制”
+        ButtonType yesButton = alert.getButtonTypes().stream()
+                .filter(buttonType -> buttonType.getButtonData() == ButtonBar.ButtonData.OK_DONE)
+                .findFirst()
+                .orElse(null);
+        if (yesButton != null) {
+            ((Button) alert.getDialogPane().lookupButton(yesButton)).setText("复制");
+        }
+
+        // 获取 alert 对话框的“取消”按钮对象，并将文本更改为“关闭”
+        ButtonType noButton = alert.getButtonTypes().stream()
+                .filter(buttonType -> buttonType.getButtonData() == ButtonBar.ButtonData.CANCEL_CLOSE)
+                .findFirst()
+                .orElse(null);
+        if (noButton != null) {
+            ((Button) alert.getDialogPane().lookupButton(noButton)).setText("关闭");
+        }
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == yesButton){
+            // 用户点击了“复制”按钮
+            Clipboard clipboard = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.put(DataFormat.PLAIN_TEXT, requestPermissionNamesStr);
+            clipboard.setContent(cc);
+            FxUtil.notification(String.format("已复制 %s", "权限信息"));
+        } else {
+            // 用户点击了“关闭”按钮
+        }
+    }
+
+    public void viewMore(ActionEvent actionEvent) {
+        HapInfo hapInfo = currentHapInfo;
+        // 检查hap路径
+        if (hapInfo == null || StrUtil.isEmpty(hapInfo.hapFilePath)) {
+            FxUtil.notification("请先打开一个hap文件");
+            return;
+        }
+
+        var moreInfoStr = "无更多信息";
+        if (hapInfo.moreInfo != null) {
+            moreInfoStr = JSONUtil.toJsonPrettyStr(hapInfo.moreInfo);
+        }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("更多信息");
+        alert.setHeaderText("");
+        alert.setContentText(moreInfoStr);
+        alert.getDialogPane().setGraphic(null);
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icon/icon.png"))));
+
+        // 获取 alert 对话框的“确定”按钮对象，并将文本更改为“复制”
+        ButtonType yesButton = alert.getButtonTypes().stream()
+                .filter(buttonType -> buttonType.getButtonData() == ButtonBar.ButtonData.OK_DONE)
+                .findFirst()
+                .orElse(null);
+        if (yesButton != null) {
+            ((Button) alert.getDialogPane().lookupButton(yesButton)).setText("复制");
+        }
+
+        // 获取 alert 对话框的“取消”按钮对象，并将文本更改为“关闭”
+        ButtonType noButton = alert.getButtonTypes().stream()
+                .filter(buttonType -> buttonType.getButtonData() == ButtonBar.ButtonData.CANCEL_CLOSE)
+                .findFirst()
+                .orElse(null);
+        if (noButton != null) {
+            ((Button) alert.getDialogPane().lookupButton(noButton)).setText("关闭");
+        }
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == yesButton){
+            // 用户点击了“复制”按钮
+            Clipboard clipboard = Clipboard.getSystemClipboard();
+            ClipboardContent cc = new ClipboardContent();
+            cc.put(DataFormat.PLAIN_TEXT, moreInfoStr);
+            clipboard.setContent(cc);
+            FxUtil.notification(String.format("已复制 %s", "更多信息"));
+        } else {
+            // 用户点击了“关闭”按钮
+        }
     }
 }

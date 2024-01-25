@@ -10,7 +10,7 @@
 
 目前支持解析的应用
 
-- 应用平台：OpenHarmony、HarmonyOS
+- 应用平台：OpenHarmony、HarmonyOS、HarmonyOS NEXT（星河版）
 - 编译目标：API9+
 - 应用模型：Stage（FA模型暂不考虑）
 
@@ -52,7 +52,8 @@
 - [x] 打开应用（选择、拖拽、默认打开方式）
 - [x] 解析应用（基本信息、逆向解析resources.index读取应用名称）
 - [x] 技术探测（原生开发、Cocos、Flutter、Qt）
-- [x] 实用工具（安装、重装、卸载、解压）
+- [x] 查看菜单（权限信息、更多信息）
+- [x] 实用工具（安装、重装、打开、关闭、卸载、解压） `部分操作仅支持OpenHarmony`
 - [x] 解析 API9 Stage 模型的安装包
 - [ ] ~~解析 API9 FA 模型 (ArkTS/JS) 的安装包~~
 

@@ -11,12 +11,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <javafx.version>21-ea+5</javafx.version>
         <javafx.staticSdk.version>21-ea+5</javafx.staticSdk.version>
-        <gluonfx-maven-plugin.version>1.0.18</gluonfx-maven-plugin.version>
+        <gluonfx-maven-plugin.version>1.0.22</gluonfx-maven-plugin.version>
         <!--<junit.version>5.8.2</junit.version>-->
         <start-class>org.ohosdev.hapviewer.App</start-class>
     </properties>
@@ -37,6 +37,7 @@
             <artifactId>controlsfx</artifactId>
             <version>11.1.2</version>
         </dependency>
+        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -103,6 +104,8 @@
                         <!-- “快速构建”模式，以减少在开发过程中生成本机可执行文件所需的时间。请注意，此模式可能会对峰值性能和生成的可执行文件的大小产生负面影响，因此建议仅用于开发目的。 -->
                         <!--<arg>-Ob</arg>-->
                         <arg>--add-exports=org.graalvm.nativeimage.builder/com.oracle.svm.core.jdk=ALL-UNNAMED</arg>
+                        <!-- Native-image building on Windows currently only supports target architecture: AMD64 (?? unsupported)) -->
+                        <arg>-H:-CheckToolchain</arg>
                     </nativeImageArgs>
                     <releaseConfiguration>
                         <!-- all targets -->

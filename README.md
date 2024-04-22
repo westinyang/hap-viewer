@@ -23,6 +23,7 @@
 
 - **电脑版（跨平台）**：[westinyang/hap-viewer](https://gitee.com/westinyang/hap-viewer)
 - 手机版（Android）：[westinyang/hap-viewer-android](https://gitee.com/westinyang/hap-viewer-android)
+- 网页版（响应式）：[westinyang/hap-viewer-web](https://gitee.com/westinyang/hap-viewer-web)
 
 ### 衍生项目
 
@@ -80,3 +81,11 @@
 
 - 本项目是以Apache2.0许可开源，如需二开、衍生或商用请注明原作者和原仓库
 - 软件图标出处：https://www.flaticon.com/free-icon/apk_9704667
+
+# 技术交流
+
+[🐧 加入OpenHarmony技术交流群](https://kaihongpai.feishu.cn/wiki/R93ywdop6iuryDkJ5ACc0L3ynEc)
+
+## 赞助支持
+
+[🧧 访问开源项目赞助支持页面](https://kaihongpai.feishu.cn/wiki/XaVUwmiJTiYvtDktzalcHbRpnNk)

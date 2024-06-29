@@ -47,6 +47,12 @@ public class HapUtil {
             hapInfo.minAPIVersion = module.getByPath("app.minAPIVersion", String.class);
             hapInfo.targetAPIVersion = module.getByPath("app.targetAPIVersion", String.class);
             hapInfo.apiReleaseType = module.getByPath("app.apiReleaseType", String.class);
+            if (hapInfo.minAPIVersion.length() > 2) {
+                hapInfo.minAPIVersion = hapInfo.minAPIVersion.substring(hapInfo.minAPIVersion.length() - 2);
+            }
+            if (hapInfo.targetAPIVersion.length() > 2) {
+                hapInfo.targetAPIVersion = hapInfo.targetAPIVersion.substring(hapInfo.targetAPIVersion.length() - 2);
+            }
 
             // module.
             hapInfo.mainElement = module.getByPath("module.mainElement", String.class);
@@ -79,10 +85,15 @@ public class HapUtil {
             if (targetAbility != null) {
                 if (targetAbility.containsKey("icon")) {
                     String iconName = targetAbility.get("icon", String.class).split(":")[1];
+                    if ("layered_image".equals(iconName)) {
+                        iconName = "startIcon";
+                    }
                     String iconPath = String.format("resources/base/media/%s.png", iconName);
                     hapInfo.iconPath = iconPath;
-                    hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
-                    hapInfo.icon = getEntryToImage(zipFile, iconPath);
+                    try {
+                        hapInfo.iconBytes = getEntryToBytes(zipFile, iconPath);
+                        hapInfo.icon = getEntryToImage(zipFile, iconPath);
+                    } catch (Exception ignore) {}
                 }
                 // 同时记录下label，用于下面解析名称
                 hapInfo.labelName = targetAbility.get("label", String.class).split(":")[1];
@@ -135,7 +146,7 @@ public class HapUtil {
             hapInfo.moreInfo.put("versionName", hapInfo.versionName);
             hapInfo.moreInfo.put("versionCode", hapInfo.versionCode);
             hapInfo.moreInfo.put("targetAPIVersion", hapInfo.targetAPIVersion);
-            hapInfo.moreInfo.put("minAPIVersion", module.getByPath("app.minAPIVersion", String.class));
+            hapInfo.moreInfo.put("minAPIVersion", hapInfo.minAPIVersion);
             hapInfo.moreInfo.put("apiReleaseType", hapInfo.apiReleaseType);
             hapInfo.moreInfo.put("mainElement", hapInfo.mainElement);
             hapInfo.moreInfo.put("deviceTypes", module.getByPath("module.deviceTypes", JSONArray.class));
